@@ -23,6 +23,14 @@ $(document).ready(function(){
     $("#source").submit(function(event) {
         event.preventDefault();
         alert(document.getElementById("selection").value)
+        $.ajax({
+            method: "GET",
+            url: "https://newsapi.org/v2/top-headlines?sources=bbc-news",
+            data: { sources: document.getElementById('selection').value, country:"us", language:"en", apikey: APIKEY},
+            success: function(show) {
+                
+            }
+        })
     });  
 }) 
 
