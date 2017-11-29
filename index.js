@@ -9,17 +9,21 @@ $(document).ready(function(){
       if (data.status === "ok") {
           for (var i = 0; i < data.sources.length; i++){
              var source = document.createElement("OPTION");
+             source.setAttribute("value", data.sources[i].id);
              source.innerHTML = data.sources[i].name;
              document.getElementById('selection').appendChild(source);
           }
-      
       }
   }
-        
     })
 //   .done(function( msg ) {
 //     console.log( "Data Saved: " + msg );
 //   });
+
+    $("#source").submit(function(event) {
+        event.preventDefault();
+        alert(document.getElementById("selection").value)
+    });  
 }) 
 
 
