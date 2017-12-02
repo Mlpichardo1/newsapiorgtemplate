@@ -24,6 +24,7 @@ $(document).ready(function() {
 });
 $("#source").submit(function(event) {
 	event.preventDefault();
+	document.getElementById('newsart').innerHTML = "";
 	$.ajax({
 		method: "GET",
 		url: "https://newsapi.org/v2/top-headlines",
@@ -36,10 +37,14 @@ $("#source").submit(function(event) {
 		},
 		success: function(show) {
 			if (show.status === "ok") {
-				for (var i = 0; i < show.articles.length; i++) {
-					var choice = document.createElement("LI");
-					choice.innerHTML = "<img src=" + show.articles[i].urlToImage + " height= 100vh> <br> " + show.articles[i].title + " <br> " + show.articles[i].description + "";
-					document.getElementById('newsart').appendChild(choice);
+				for (var i = 5; i < show.articles.length; i++) {
+					var picLink = document.createElement("A");
+					picLink.setAttribute("href", show.articles[i].url);
+					picLink.innerHTML = "<img src=" + show.articles[i].urlToImage + " height= 100vh> <br> " + show.articles[i].title + " <br> ";
+					document.getElementById('newsart').appendChild(picLink);
+					var desc = document.createElement("DIV");
+					desc.innerHTML = show.articles[i].description;
+					document.getElementById('newsart').appendChild(desc);
 				}
 			}
 		}

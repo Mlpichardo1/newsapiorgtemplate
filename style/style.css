@@ -1,6 +1,30 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1456425731181-2152d80d946c?auto=format&fit=crop&w=1351&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2 {
+    font-family: 'Vollkorn SC', serif;
+    color: white;
+}
+
+#source {
+    background-color: #FFF7F2;
+}
+
 #newsart {
     display: block;
-    list-style-type: disc;
-    margin: 1em;
-    padding-left: 40px;
+    flex-wrap: nowrap;
+    margin: 2em;
+    padding-left: 20px;
+    font-family: 'Nunito', sans-serif;
+    flex-direction: row;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: lightblue;
 }
