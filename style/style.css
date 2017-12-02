@@ -9,10 +9,12 @@ body {
 h2 {
     font-family: 'Vollkorn SC', serif;
     color: white;
+    font-weight: bold;
 }
 
 #source {
     background-color: #FFF7F2;
+    font-weight: bold;
 }
 
 #newsart {
@@ -22,7 +24,6 @@ h2 {
     padding-left: 20px;
     font-family: 'Nunito', sans-serif;
     flex-direction: row;
-    font-weight: bold;
 }
 
 a:hover {
