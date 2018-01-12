@@ -6,7 +6,7 @@ $(document).ready(function() {
 		url: "https://newsapi.org/v2/sources",
 		data: {
 			category: "business",
-			country: "us",
+			// country: "us",
 			language: "en",
 			apikey: APIKEY
 		},
@@ -30,9 +30,9 @@ $("#source").submit(function(event) {
 		url: "https://newsapi.org/v2/top-headlines",
 		data: {
 			sources: document.getElementById('selection').value,
-			country: "us",
+			// country: "us",
 			language: "en",
-			category: "business",
+			// category: "business",
 			apikey: APIKEY
 		},
 		success: function(show) {
